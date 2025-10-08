@@ -71,11 +71,11 @@ app.get("/users", async (req, res) => {
   res.json(users);
 });
 
-//app.post("/users", async (req, res) => {
-  //const newUser = new User(req.body);
-  //await newUser.save();
-  //res.json(newUser);
-//});
+app.post("/postusers", async (req, res) => {
+  const newUser = new User(req.body);
+  await newUser.save();
+  res.json(newUser);
+});
 
 // Start server
 app.listen(5000, () => {
